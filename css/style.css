@@ -6,8 +6,10 @@
 html {
   scroll-behavior: smooth; }
 
+img {
+  vertical-align: bottom; }
+
 .s-main-container {
-  max-width: 1400px;
   position: relative;
   margin: 0 auto; }
   .s-main-container .s-inner-container {
@@ -174,6 +176,9 @@ html {
     @media (min-width: 320px) and (max-width: 1060px) {
       .s-main-container .s-banner-title {
         margin: 0 0 50px; } }
+    .s-main-container .s-banner-title .s-inner-container {
+      position: relative;
+      height: inherit; }
     .s-main-container .s-banner-title span.sb-title {
       text-align: left;
       font: Bold 30px/51px YuGothic;
@@ -182,7 +187,7 @@ html {
       opacity: 1;
       position: absolute;
       top: 50%;
-      left: 180px;
+      left: 0;
       transform: translate(0, -50%); }
       @media (min-width: 320px) and (max-width: 767px) {
         .s-main-container .s-banner-title span.sb-title {
@@ -234,11 +239,12 @@ html {
     @media (min-width: 320px) and (max-width: 1060px) {
       .s-main-container .s-content-box-container {
         padding: 0 20px; } }
+    .s-main-container .s-content-box-container .content-boxes.top-border {
+      border-top: 1px solid #CCCCCC; }
     .s-main-container .s-content-box-container .content-boxes {
       text-align: center;
       padding: 24px 0 0;
-      position: relative;
-      border-top: 1px solid #CCCCCC; }
+      position: relative; }
       .s-main-container .s-content-box-container .content-boxes span.top-minner-border {
         top: -1px;
         left: 0;
@@ -373,12 +379,41 @@ html {
           padding-bottom: 50px; } }
       .s-main-container .s-content-box-container .content-boxes.multiple-boxes h2.boxes-title {
         margin: 0 0 51px; }
+    .s-main-container .s-content-box-container .card-boxes {
+      padding-top: 0 !important; }
+      .s-main-container .s-content-box-container .card-boxes .cards-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 40px;
+        margin: 0 0 80px; }
+        .s-main-container .s-content-box-container .card-boxes .cards-list .single-card p {
+          position: relative;
+          text-align: left;
+          font: Bold 16px/29px YuGothic;
+          letter-spacing: 0px;
+          color: #333333;
+          height: 60px;
+          line-height: 60px;
+          padding-left: 14px; }
+          .s-main-container .s-content-box-container .card-boxes .cards-list .single-card p a {
+            text-align: center;
+            text-decoration: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: inherit;
+            line-height: inherit;
+            width: 60px;
+            color: #fff;
+            background-color: #3E9B4C; }
+            .s-main-container .s-content-box-container .card-boxes .cards-list .single-card p a:hover {
+              background-color: #348441; }
   .s-main-container .s-content-box-container.no-margin-bottom {
     margin: 0; }
   .s-main-container .s-footer-top {
     height: 60px;
     line-height: 60px;
-    border-top: 1px solid #CCCCCC; }
+    border-top: 1px solid #F4F4F1; }
     .s-main-container .s-footer-top p {
       text-align: right;
       line-height: 60px !important;

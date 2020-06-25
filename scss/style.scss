@@ -6,8 +6,11 @@
 html {
     scroll-behavior: smooth;
 }
+img {
+    vertical-align: bottom;
+}
 .s-main-container {
-    max-width: 1400px;
+    // max-width: 1400px;
     position: relative;
     margin: 0 auto;
     .s-inner-container {
@@ -200,6 +203,10 @@ html {
         @media (min-width: 320px) and (max-width: 1060px) {
             margin: 0 0 50px;
         }
+        .s-inner-container {
+            position: relative;
+            height: inherit;
+        }
         span.sb-title {
             text-align: left;
             font: Bold 30px/51px YuGothic;
@@ -208,7 +215,7 @@ html {
             opacity: 1;
             position: absolute;
             top: 50%;
-            left: 180px;
+            left: 0;
             transform: translate(0, -50%);
             @media (min-width: 320px) and (max-width: 767px) {
                 font: Bold 18px/34px YuGothic;
@@ -269,11 +276,13 @@ html {
         @media (min-width: 320px) and (max-width: 1060px) {
             padding: 0 20px;
         }
+        .content-boxes.top-border {
+            border-top: 1px solid #CCCCCC;
+        }
         .content-boxes {
             text-align: center;
             padding: 24px 0 0;
             position: relative;
-            border-top: 1px solid #CCCCCC;
             span.top-minner-border {
                 top: -1px;
                 left: 0;
@@ -431,6 +440,42 @@ html {
                 margin: 0 0 51px;
             }
         }
+        .card-boxes {
+            padding-top: 0 !important;
+            .cards-list {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 40px;
+                margin: 0 0 80px;
+                .single-card {
+                    p {
+                        position: relative;
+                        text-align: left;
+                        font: Bold 16px/29px YuGothic;
+                        letter-spacing: 0px;
+                        color: #333333;
+                        height: 60px;
+                        line-height: 60px;
+                        padding-left: 14px;
+                        a {
+                            text-align: center;
+                            text-decoration: none;
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            height: inherit;
+                            line-height: inherit;
+                            width: 60px;
+                            color: #fff;
+                            background-color: #3E9B4C;
+                            &:hover {
+                                background-color: #348441;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     .s-content-box-container.no-margin-bottom {
         margin: 0;
@@ -439,7 +484,7 @@ html {
     .s-footer-top {
         height: 60px;
         line-height: 60px;
-        border-top: 1px solid #CCCCCC;
+        border-top: 1px solid #F4F4F1;
         p {
             text-align: right;
             line-height: 60px !important;
