@@ -198,6 +198,7 @@ img {
         height: 200px;
         margin: 0 0 100px;
         background: url('../img/banner-title.png') no-repeat;
+        // background: url('https://hmp.me/c5tw') no-repeat;
         background-size: cover;
         background-position: center;
         @media (min-width: 320px) and (max-width: 1060px) {
@@ -243,6 +244,7 @@ img {
         }
         .s-inner-container.main-banner {
             background: url('../img/banner.png') no-repeat;
+            // background: url('https://hmp.me/c5tv') no-repeat;
             background-size: cover;
             background-position: center;
             opacity: 1;
@@ -447,7 +449,19 @@ img {
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-gap: 40px;
                 margin: 0 0 80px;
+                @media (min-width: 320px) and (max-width: 767px) {
+                    grid-template-columns: 1fr;   
+                }
+                @media (min-width: 768px) and (max-width: 1023px) {
+                    grid-template-columns: 1fr 1fr;   
+                }
                 .single-card {
+                    img {
+                        width: 100%;  
+                        @media (min-width: 320px) and (max-width: 1023px) {
+                            width: 100%;   
+                        }
+                    }
                     p {
                         position: relative;
                         text-align: left;
