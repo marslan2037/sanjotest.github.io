@@ -19,6 +19,73 @@ span.top-minner-border {
     span.top-minner-border {
       width: 80px; } }
 
+ul.buttons-list li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 20px; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    ul.buttons-list li {
+      display: block;
+      margin: 0 0 25px; } }
+  ul.buttons-list li:last-child {
+    margin: 0; }
+  ul.buttons-list li button {
+    width: 280px;
+    height: 66px;
+    line-height: 66px;
+    background: #FFFFFF;
+    border: 1px solid #3E9B4C;
+    border-radius: 70px;
+    font: Bold 14px/22px YuGothic;
+    letter-spacing: 0px;
+    color: #3E9B4C;
+    cursor: pointer; }
+    ul.buttons-list li button:hover {
+      background: #3E9B4C;
+      color: #fff; }
+    @media (min-width: 320px) and (max-width: 767px) {
+      ul.buttons-list li button {
+        width: 225px;
+        height: 45px;
+        font-size: 12px; } }
+ul.buttons-list li.colored-button button {
+  background: #3E9B4C;
+  color: #fff; }
+  ul.buttons-list li.colored-button button:hover {
+    color: #3E9B4C;
+    background: #fff; }
+ul.buttons-list li.have-grid button {
+  text-align: left;
+  padding: 0 25px;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  align-items: center; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    ul.buttons-list li.have-grid button {
+      padding: 0 15px; } }
+  @media (min-width: 320px) and (max-width: 767px) {
+    ul.buttons-list li.have-grid button span {
+      line-height: 14px; } }
+  ul.buttons-list li.have-grid button span.first {
+    align-self: end; }
+  ul.buttons-list li.have-grid button span.second {
+    align-self: start; }
+  ul.buttons-list li.have-grid button span.fa {
+    justify-self: end;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3; }
+
+ul.buttons-list.grid-buttons {
+  display: grid;
+  grid-template-columns: 280px 280px;
+  grid-gap: 20px;
+  justify-content: center; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    ul.buttons-list.grid-buttons {
+      grid-template-columns: 225px; } }
+  ul.buttons-list.grid-buttons li {
+    margin: 0; }
+
 .s-main-container {
   position: relative;
   margin: 0 auto; }
@@ -352,40 +419,6 @@ span.top-minner-border {
               transform: translate(0, -50%);
               font-size: 14px;
               font-weight: bold; }
-      .s-main-container .s-content-box-container .content-boxes ul.buttons-list li {
-        list-style: none;
-        display: inline-block;
-        margin-right: 20px; }
-        @media (min-width: 320px) and (max-width: 767px) {
-          .s-main-container .s-content-box-container .content-boxes ul.buttons-list li {
-            display: block;
-            margin: 0 0 25px; } }
-        .s-main-container .s-content-box-container .content-boxes ul.buttons-list li:last-child {
-          margin: 0; }
-        .s-main-container .s-content-box-container .content-boxes ul.buttons-list li button {
-          width: 280px;
-          height: 66px;
-          line-height: 66px;
-          background: #FFFFFF;
-          border: 1px solid #3E9B4C;
-          border-radius: 70px;
-          font: Bold 15px/22px YuGothic;
-          letter-spacing: 0px;
-          color: #3E9B4C;
-          cursor: pointer; }
-          .s-main-container .s-content-box-container .content-boxes ul.buttons-list li button:hover {
-            background: #3E9B4C;
-            color: #fff; }
-          @media (min-width: 320px) and (max-width: 767px) {
-            .s-main-container .s-content-box-container .content-boxes ul.buttons-list li button {
-              width: 225px;
-              height: 45px; } }
-      .s-main-container .s-content-box-container .content-boxes ul.buttons-list li.colored-button button {
-        background: #3E9B4C;
-        color: #fff; }
-        .s-main-container .s-content-box-container .content-boxes ul.buttons-list li.colored-button button:hover {
-          color: #3E9B4C;
-          background: #fff; }
     .s-main-container .s-content-box-container .content-boxes.multiple-boxes {
       padding: 24px 0 120px; }
       @media (min-width: 320px) and (max-width: 767px) {
@@ -572,6 +605,97 @@ span.top-minner-border {
         background: none; }
   .s-main-container .s-content-box-container.no-margin-bottom {
     margin: 0; }
+  .s-main-container .s-how-to-section {
+    background: url("../img/how-to-base.png") no-repeat;
+    height: 394px;
+    padding: 80px 0;
+    position: relative;
+    background-size: cover; }
+    @media (min-width: 320px) and (max-width: 1023px) {
+      .s-main-container .s-how-to-section {
+        padding: 20px;
+        height: 360px; } }
+    .s-main-container .s-how-to-section .how-to-middle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 850px; }
+      @media (min-width: 320px) and (max-width: 1023px) {
+        .s-main-container .s-how-to-section .how-to-middle {
+          width: 90%; } }
+    .s-main-container .s-how-to-section h2 {
+      text-align: center;
+      font: Bold 30px/38px YuGothic;
+      letter-spacing: 0px;
+      color: #FFFFFF;
+      margin: 0 0 50px; }
+      @media (min-width: 320px) and (max-width: 767px) {
+        .s-main-container .s-how-to-section h2 {
+          font-size: 20px;
+          margin: 0 0 25px;
+          line-height: 22px; } }
+      @media (min-width: 768px) and (max-width: 1023px) {
+        .s-main-container .s-how-to-section h2 {
+          font-size: 24px;
+          margin: 0 0 35px;
+          line-height: 24px; } }
+    .s-main-container .s-how-to-section .h-detail {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 106px;
+      text-align: center; }
+      @media (min-width: 320px) and (max-width: 767px) {
+        .s-main-container .s-how-to-section .h-detail {
+          grid-template-columns: 1fr;
+          grid-gap: 45px; } }
+      .s-main-container .s-how-to-section .h-detail h2 {
+        margin: 0 0 30px;
+        font: Bold 20px/26px YuGothic;
+        color: #FFFFFF; }
+        @media (min-width: 320px) and (max-width: 767px) {
+          .s-main-container .s-how-to-section .h-detail h2 {
+            font-size: 14px;
+            margin: 0 0 15px; } }
+        @media (min-width: 768px) and (max-width: 1023px) {
+          .s-main-container .s-how-to-section .h-detail h2 {
+            font-size: 16px;
+            margin: 0 0 20px; } }
+      .s-main-container .s-how-to-section .h-detail p.phone-no {
+        font: Bold 39px/26px Overpass;
+        color: #FFFFFF;
+        margin: 0 0 12px; }
+        @media (min-width: 320px) and (max-width: 767px) {
+          .s-main-container .s-how-to-section .h-detail p.phone-no {
+            font-size: 14px;
+            line-height: 14px; } }
+        @media (min-width: 768px) and (max-width: 1023px) {
+          .s-main-container .s-how-to-section .h-detail p.phone-no {
+            font-size: 24px;
+            line-height: 24px; } }
+      .s-main-container .s-how-to-section .h-detail span {
+        display: block;
+        font: Bold 16px/22px YuGothic;
+        color: #FFFFFF;
+        margin: 0 0 20px; }
+        @media (min-width: 320px) and (max-width: 767px) {
+          .s-main-container .s-how-to-section .h-detail span {
+            font-size: 12px;
+            line-height: 12px;
+            margin: 0 0 15px; } }
+        @media (min-width: 768px) and (max-width: 1023px) {
+          .s-main-container .s-how-to-section .h-detail span {
+            font-size: 14px;
+            line-height: 14px; } }
+      .s-main-container .s-how-to-section .h-detail p {
+        font: 600 16px/22px YuGothic;
+        color: #FFFFFF; }
+        @media (min-width: 320px) and (max-width: 767px) {
+          .s-main-container .s-how-to-section .h-detail p {
+            font-size: 12px; } }
+        @media (min-width: 768px) and (max-width: 1023px) {
+          .s-main-container .s-how-to-section .h-detail p {
+            font-size: 14px; } }
   .s-main-container .s-footer-top {
     height: 60px;
     line-height: 60px;
