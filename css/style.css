@@ -741,6 +741,68 @@ ul.buttons-list.grid-buttons {
             .s-main-container .s-content-box-container .content-boxes .s-files-links-section ul li a {
               font: 500 15px/16px YuGothic Regular;
               color: #3E9B4C; }
+      .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section {
+        margin: 0 0 129px; }
+        .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section h2 {
+          margin: 0 0 29px;
+          font: Bold 18px/22px YuGothic;
+          color: #333333;
+          height: 30px;
+          line-height: 30px;
+          padding: 0 0 0 12px;
+          border-left: 4px solid #3E9B4C; }
+        .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section .smb-text {
+          margin: 0 0 28px; }
+        .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section p {
+          text-align: left;
+          font: 500 15px/24px YuGothic Regular;
+          color: #333333; }
+        .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section .smb-map-boxes {
+          display: grid;
+          grid-template-columns: repeat(26, 1fr);
+          align-items: center;
+          grid-template-rows: 50px 30px 12px 50px 30px 50px 20px; }
+          .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section .smb-map-boxes .x-axis-box, .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section .smb-map-boxes .y-axis-box {
+            color: #666666;
+            font: Bold 16px/30px YuGothic;
+            border: 1px solid #666666; }
+          .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section .smb-map-boxes .x-axis-box {
+            height: 50px;
+            line-height: 50px; }
+          .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section .smb-map-boxes .x-axis-box.first-box {
+            grid-column: 1 / 5;
+            grid-row: 1 / 2; }
+          .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section .smb-map-boxes .x-axis-box.second-box {
+            grid-column: 12 / 15;
+            grid-row: 1 / 2; }
+          .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section .smb-map-boxes .x-axis-box.dark-box, .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section .smb-map-boxes .y-axis-box.dark-box {
+            background: #666666;
+            color: #fff; }
+          .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section .smb-map-boxes .x-axis-box.third-box {
+            grid-column: 1 / 5;
+            grid-row: 4 / 5; }
+          .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section .smb-map-boxes .x-axis-box.fourth-box {
+            grid-column: 13 / 14;
+            grid-row: 4 / 7;
+            height: 100%; }
+          .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section .smb-map-boxes .x-axis-box.fifth-box {
+            grid-column: 22 / 23;
+            grid-row: 3 / 8;
+            height: 100%; }
+          .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section .smb-map-boxes .x-axis-box.sixth-box {
+            grid-column: 1 / 5;
+            grid-row: 6 / 7; }
+          .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section .smb-map-boxes .x-axis-box.seventh-box {
+            grid-column: 7 / 11;
+            grid-row: 6 / 7; }
+          .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section .smb-map-boxes .y-axis-box.last-box {
+            grid-column: 26 / 27;
+            grid-row: 1 / 8;
+            height: 100%; }
+            .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section .smb-map-boxes .y-axis-box.last-box span {
+              transform: rotate3d(45); }
+          .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section .smb-map-boxes span.blue-arrow {
+            border-bottom: 1px solid #3566A0; }
       .s-main-container .s-content-box-container .content-boxes .img-row-detail-grid {
         display: grid;
         grid-gap: 40px;
@@ -1248,7 +1310,10 @@ ul.buttons-list.grid-buttons {
       .s-main-container footer .goto-top span.fa {
         align-self: self-end; }
       .s-main-container footer .goto-top span.top {
-        align-self: self-start; }
+        align-self: self-start;
+        color: #fff; }
+      .s-main-container footer .goto-top span {
+        color: #fff; }
     .s-main-container footer h2 {
       text-align: left;
       font: Bold 18px/24px YuGothic;
