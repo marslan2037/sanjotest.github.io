@@ -63,6 +63,23 @@
                 <div class="s-inner-container content-boxes multiple-boxes table-grid">
 
                     <div class="s-form-section-container">
+                        <ul class="form-header form-have-grid">
+                            <li class="item-have-grid active">
+                                <span class="f-number">1 <span class="middle-line"></span></span>
+                                <span class="f-text">お問い合わせ内容入力</span>
+                            </li>
+
+                            <li class="item-have-grid">
+                                <span class="f-number">2 <span class="middle-line"></span></span>
+                                <span class="f-text">内容確認</span>
+                            </li>
+                            
+                            <li class="item-have-grid">
+                                <span class="f-number">3</span>
+                                <span class="f-text">完了</span>
+                            </li>
+                        </ul>
+
                         <div class="s-form-header">
                             <p>当社製品に関するご質問・ご相談を受け付けております。 お気軽にお問い合わせください。</p> 
                             <p>送信内容を確認させていただき、担当よりご連絡いたします。</p>
@@ -80,17 +97,17 @@
                             </div>
 
                             <div class="single-form-row">
-                                <label>お名前 <span></span></label>
+                                <label>お名前 <span class="label-span-text">必須</span></label>
                                 <input type="text" placeholder="山田太郎">
                             </div>
 
                             <div class="single-form-row">
-                                <label>フリガナ <span></span></label>
+                                <label>フリガナ <span class="label-span-text">必須</span></label>
                                 <input type="text" placeholder="ヤマダタロウ">
                             </div>
 
                             <div class="single-form-row">
-                                <label>郵便番号 <span></span></label>
+                                <label>郵便番号 <span class="label-span-text">必須</span></label>
                                 <div class="input-have-grid">
                                     <input type="text" placeholder="1001000">
                                     <input type="text" placeholder="郵便番号検索" style="background: #E9F2EE">
@@ -117,7 +134,7 @@
                             </div>
 
                             <div class="single-form-row">
-                                <label>電話番号 <span></span></label>
+                                <label>電話番号 <span class="label-span-text">必須</span></label>
                                 <input type="text" placeholder="例) 0310001000 ※半角数字、ハイフン(-)不要">
                             </div>
 
@@ -127,12 +144,12 @@
                             </div>
 
                             <div class="single-form-row">
-                                <label>メールアドレス <span></span></label>
+                                <label>メールアドレス <span class="label-span-text">必須</span></label>
                                 <input type="text" placeholder="例) example@xxxxxx.co.jp">
                             </div>
 
                             <div class="single-form-row">
-                                <label style="align-self: start;">お問い合わせ内容 <span></span></label>
+                                <label style="align-self: start;">お問い合わせ内容 <span class="label-span-text">必須</span></label>
                                 <textarea>入力して下さい</textarea>
                             </div>
 
@@ -156,9 +173,13 @@
                                 </ul>
                             </div>
 
-                            <div class="single-form-row have-checkbox">
-                                <input type="checkbox" id="checkbox" name="checkbox" value="checkbox">
-                                <label for="checkbox"> 株式会社山城精機製作所が定める個人情報保護方針に同意します。</label>
+                            <div class="single-form-row have-checkbox">                                
+                                <label for="checkbox">
+                                    <input type="checkbox" id="checkbox" name="checkbox" value="checkbox">
+                                    <span class="custom-checkbox"><span class="fa fa-check"></span></span>
+                                     
+                                    株式会社山城精機製作所が定める個人情報保護方針に同意します。
+                                </label>
                             </div>
                         </form>
                     </div>

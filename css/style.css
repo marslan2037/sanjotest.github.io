@@ -511,6 +511,42 @@ ul.buttons-list.grid-buttons {
       .s-main-container .s-content-box-container .content-boxes .s-form-section-container {
         margin: 0 auto 80px;
         width: 800px; }
+        .s-main-container .s-content-box-container .content-boxes .s-form-section-container .form-header.form-have-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-gap: 70px;
+          align-items: center;
+          width: 580px;
+          margin: 0 auto 60px; }
+          .s-main-container .s-content-box-container .content-boxes .s-form-section-container .form-header.form-have-grid li.item-have-grid {
+            list-style: none;
+            display: grid;
+            grid-gap: 16px; }
+            .s-main-container .s-content-box-container .content-boxes .s-form-section-container .form-header.form-have-grid li.item-have-grid span {
+              justify-self: center;
+              display: grid;
+              align-items: center; }
+            .s-main-container .s-content-box-container .content-boxes .s-form-section-container .form-header.form-have-grid li.item-have-grid span.f-number {
+              width: 48px;
+              height: 48px;
+              border-radius: 50%;
+              color: #3E9B4C;
+              border: 1px solid #E9F2EE;
+              font: Regular 18px/22px Arial;
+              position: relative; }
+              .s-main-container .s-content-box-container .content-boxes .s-form-section-container .form-header.form-have-grid li.item-have-grid span.f-number span.middle-line {
+                position: absolute;
+                width: 138px;
+                top: 50%;
+                transform: translate(0, -50%);
+                right: -154px;
+                border: 1px solid #E9F2EE; }
+            .s-main-container .s-content-box-container .content-boxes .s-form-section-container .form-header.form-have-grid li.item-have-grid span.f-text {
+              font: Bold 14px/22px YuGothic;
+              color: #3E9B4C; }
+          .s-main-container .s-content-box-container .content-boxes .s-form-section-container .form-header.form-have-grid li.item-have-grid.active span.f-number {
+            background: #3E9B4C;
+            color: #FFFFFF; }
         .s-main-container .s-content-box-container .content-boxes .s-form-section-container h2 {
           font: Bold 24px/24px YuGothic;
           color: #3E9B4C;
@@ -558,7 +594,8 @@ ul.buttons-list.grid-buttons {
               color: #E61F37;
               position: relative;
               left: 9px;
-              border: 1px solid #E61F37; }
+              border: 1px solid #E61F37;
+              padding: 0 6px; }
           .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row input, .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row textarea, .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row select {
             border: 1px solid #E9F2EE;
             color: #93BCA8; }
@@ -585,7 +622,7 @@ ul.buttons-list.grid-buttons {
             .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row .input-have-grid input {
               width: 100%; }
           .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row .input-have-grid.input-radio-grid {
-            grid-template-columns: 100px 110px;
+            grid-template-columns: 110px 110px;
             grid-gap: 30px; }
             .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row .input-have-grid.input-radio-grid label {
               display: grid;
@@ -601,10 +638,44 @@ ul.buttons-list.grid-buttons {
         .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row.have-checkbox {
           margin: 0 0 85px;
           padding: 0;
-          border: none; }
-          .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row.have-checkbox label input[type=checkbox] {
+          border: none;
+          display: initial; }
+          .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row.have-checkbox label {
+            display: initial;
+            text-align: center;
+            line-height: 30px;
+            position: relative;
+            color: #333333;
+            font: 500 15px/27px YuGothic Regular; }
+          .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row.have-checkbox span.custom-checkbox {
             width: 30px;
-            height: 30px; }
+            height: 30px;
+            border: 1px solid #E6EEF2;
+            position: relative;
+            text-align: center;
+            position: absolute;
+            display: inline-block;
+            left: -40px; }
+            .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row.have-checkbox span.custom-checkbox span.fa.fa-check {
+              display: none;
+              border: none;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              color: #3E9B4C; }
+          .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row.have-checkbox input[type="checkbox"]:checked + span.custom-checkbox span.fa.fa-check {
+            display: block; }
+          .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row.have-checkbox input[type=checkbox] {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0; }
         .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row.no-grid {
           display: block;
           overflow-y: auto;

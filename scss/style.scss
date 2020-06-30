@@ -604,6 +604,51 @@ ul.buttons-list.grid-buttons {
             .s-form-section-container {
                 margin: 0 auto 80px;
                 width: 800px;
+                .form-header.form-have-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-gap: 70px;
+                    align-items: center;
+                    width: 580px;
+                    margin: 0 auto 60px;
+                    li.item-have-grid {
+                        list-style: none;
+                        display: grid;
+                        grid-gap: 16px;
+                        span {
+                            justify-self: center;
+                            display: grid;
+                            align-items: center;
+                        }
+                        span.f-number {
+                            width: 48px;
+                            height: 48px;
+                            border-radius: 50%;
+                            color: #3E9B4C;
+                            border: 1px solid #E9F2EE;
+                            font: Regular 18px/22px Arial;
+                            position: relative;
+                            span.middle-line {
+                                position: absolute;
+                                width: 138px;
+                                top: 50%;
+                                transform: translate(0, -50%);
+                                right: -154px;
+                                border: 1px solid #E9F2EE;
+                            }
+                        }
+                        span.f-text {
+                            font: Bold 14px/22px YuGothic;
+                            color: #3E9B4C;
+                        }
+                    }
+                    li.item-have-grid.active {
+                        span.f-number {
+                            background: #3E9B4C;
+                            color: #FFFFFF;
+                        }
+                    }
+                }
                 h2 {
                     font: Bold 24px/24px YuGothic;
                     color: #3E9B4C;
@@ -662,6 +707,7 @@ ul.buttons-list.grid-buttons {
                             position: relative;
                             left: 9px;
                             border: 1px solid #E61F37;
+                            padding: 0 6px;
                         }
                     }
                     input, textarea, select {
@@ -697,7 +743,7 @@ ul.buttons-list.grid-buttons {
                         }
                     }
                     .input-have-grid.input-radio-grid {
-                        grid-template-columns: 100px 110px;
+                        grid-template-columns: 110px 110px;
                         grid-gap: 30px;
                         label {
                             display: grid;
@@ -719,11 +765,49 @@ ul.buttons-list.grid-buttons {
                     margin: 0 0 85px;
                     padding: 0;
                     border: none;
+                    display: initial;
                     label {
-                        input[type=checkbox] {
-                            width: 30px;
-                            height: 30px;
+                        display: initial;
+                        text-align: center;
+                        line-height: 30px;
+                        position: relative;
+                        color: #333333;
+                        font: 500 15px/27px YuGothic Regular;
+                    }
+                    span.custom-checkbox {
+                        width: 30px;
+                        height: 30px;
+                        border: 1px solid #E6EEF2;
+                        position: relative;
+                        text-align: center;
+                        position: absolute;
+                        display: inline-block;
+                        left: -40px;
+                        span.fa.fa-check {
+                            display: none;
+                            border: none;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            color: #3E9B4C;
                         }
+                    }
+                    input[type="checkbox"]:checked + span.custom-checkbox {
+                        span.fa.fa-check {
+                            display: block;
+                        }
+                    }
+                    input[type=checkbox] {
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+                        position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                        height: 0;
+                        width: 0;
                     }
                 }
                 .single-form-row.no-grid {
