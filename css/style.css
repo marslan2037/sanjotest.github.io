@@ -328,9 +328,17 @@ ul.buttons-list.grid-buttons {
     @media (min-width: 768px) and (max-width: 1023px) {
       .s-main-container .s-banner-title.big-banner-title {
         height: 400px; } }
+    .s-main-container .s-banner-title.big-banner-title .s-inner-container {
+      position: relative; }
     .s-main-container .s-banner-title.big-banner-title .sb-title {
+      width: 85%;
       left: 50%;
+      top: 50%;
+      text-align: center;
       transform: translate(-50%, -50%); }
+      @media (min-width: 320px) and (max-width: 767px) {
+        .s-main-container .s-banner-title.big-banner-title .sb-title {
+          width: 90%; } }
       .s-main-container .s-banner-title.big-banner-title .sb-title .top-main-title {
         background: #3E9B4C;
         height: 54px;
@@ -343,13 +351,18 @@ ul.buttons-list.grid-buttons {
         margin: 0 0 30px; }
         @media (min-width: 320px) and (max-width: 1023px) {
           .s-main-container .s-banner-title.big-banner-title .sb-title .top-main-title {
-            font-size: 18px;
+            font-size: 16px;
             height: 40px;
+            padding: 0 10px;
             line-height: 40px;
             letter-spacing: 3px; } }
       .s-main-container .s-banner-title.big-banner-title .sb-title .s-mini-detail {
+        text-align: center;
         font: Bold 22px/22px YuGothic;
         color: #FFFFFF; }
+        @media (min-width: 320px) and (max-width: 767px) {
+          .s-main-container .s-banner-title.big-banner-title .sb-title .s-mini-detail {
+            font-size: 16px; } }
   .s-main-container .s-main-banner-container {
     height: 520px;
     margin: 0 0 50px; }
@@ -518,9 +531,11 @@ ul.buttons-list.grid-buttons {
           align-items: center;
           width: 580px;
           margin: 0 auto 60px; }
+          @media (min-width: 320px) and (max-width: 550px) {
+            .s-main-container .s-content-box-container .content-boxes .s-form-section-container .form-header.form-have-grid {
+              grid-template-columns: 1fr; } }
           @media (min-width: 320px) and (max-width: 767px) {
             .s-main-container .s-content-box-container .content-boxes .s-form-section-container .form-header.form-have-grid {
-              grid-template-columns: 1fr;
               grid-gap: 25px;
               margin: 0 0 25px;
               width: inherit; } }
@@ -633,6 +648,10 @@ ul.buttons-list.grid-buttons {
             height: 50px;
             line-height: 50px;
             max-width: 340px; }
+            @media (min-width: 320px) and (max-width: 1023px) {
+              .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row input, .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row select {
+                width: 100%;
+                max-width: 100%; } }
           .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row .input-have-grid {
             display: grid;
             grid-template-columns: 100px 100px;
@@ -640,19 +659,48 @@ ul.buttons-list.grid-buttons {
             .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row .input-have-grid input {
               width: 100%; }
           .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row .input-have-grid.input-radio-grid {
-            grid-template-columns: 110px 110px;
+            grid-template-columns: 150px 150px;
             grid-gap: 30px; }
             .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row .input-have-grid.input-radio-grid label {
               display: grid;
               align-items: center;
+              grid-gap: 8px;
               grid-template-columns: 30px 1fr; }
               .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row .input-have-grid.input-radio-grid label span {
+                border: none; }
+              .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row .input-have-grid.input-radio-grid label span.radio-text {
                 border: none;
                 font: 500 15px/18px YuGothic Regular;
                 color: #333333; }
-            .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row .input-have-grid.input-radio-grid input[type="radio"] {
-              width: 30px;
-              height: 30px; }
+              .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row .input-have-grid.input-radio-grid label span.radio-circle {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                border: 1px solid #E9F2EE;
+                position: relative; }
+                .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row .input-have-grid.input-radio-grid label span.radio-circle::before {
+                  opacity: 0;
+                  content: '';
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  width: 10px;
+                  height: 10px;
+                  border-radius: 50%;
+                  background: #3E9B4C; }
+              .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row .input-have-grid.input-radio-grid label input[type="radio"]:checked + span.radio-circle::before {
+                opacity: 1; }
+        .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row.have-radio input[type=radio] {
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0; }
         .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row.have-checkbox {
           margin: 0 0 85px;
           padding: 0;
@@ -1028,6 +1076,15 @@ ul.buttons-list.grid-buttons {
         position: relative;
         height: 360px;
         margin: 0 0 180px; }
+        @media (min-width: 320px) and (max-width: 580px) {
+          .s-main-container .s-content-box-container .content-boxes .req-sections {
+            padding: 35px 0 35px;
+            height: auto;
+            margin: 0 0 90px; } }
+        @media (min-width: 581px) and (max-width: 1023px) {
+          .s-main-container .s-content-box-container .content-boxes .req-sections {
+            padding: 35px 0 0;
+            height: 240px; } }
         .s-main-container .s-content-box-container .content-boxes .req-sections h2 {
           font: Bold 30px/38px YuGothic;
           color: #454545;
@@ -1043,8 +1100,33 @@ ul.buttons-list.grid-buttons {
           grid-template-columns: 450px 450px;
           grid-gap: 40px;
           justify-content: center; }
+          @media (min-width: 320px) and (max-width: 1023px) {
+            .s-main-container .s-content-box-container .content-boxes .req-sections .req-sections-grid {
+              display: block; } }
           .s-main-container .s-content-box-container .content-boxes .req-sections .req-sections-grid .req-single-item {
             position: relative; }
+            @media (min-width: 320px) and (max-width: 580px) {
+              .s-main-container .s-content-box-container .content-boxes .req-sections .req-sections-grid .req-single-item {
+                position: relative;
+                width: initial;
+                display: block;
+                margin: 0 0 50px; }
+                .s-main-container .s-content-box-container .content-boxes .req-sections .req-sections-grid .req-single-item:last-child {
+                  margin: 0; } }
+            @media (min-width: 581px) and (max-width: 1023px) {
+              .s-main-container .s-content-box-container .content-boxes .req-sections .req-sections-grid .req-single-item {
+                width: 45%;
+                display: inline-block;
+                position: absolute; }
+                .s-main-container .s-content-box-container .content-boxes .req-sections .req-sections-grid .req-single-item:first-child {
+                  left: 0;
+                  right: initial; }
+                .s-main-container .s-content-box-container .content-boxes .req-sections .req-sections-grid .req-single-item:last-child {
+                  right: 0;
+                  left: initial; } }
+            .s-main-container .s-content-box-container .content-boxes .req-sections .req-sections-grid .req-single-item img {
+              width: 100%;
+              height: 100%; }
             .s-main-container .s-content-box-container .content-boxes .req-sections .req-sections-grid .req-single-item button {
               position: absolute;
               width: 225px;

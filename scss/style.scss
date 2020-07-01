@@ -384,9 +384,18 @@ ul.buttons-list.grid-buttons {
         @media (min-width: 768px) and (max-width: 1023px) {
             height: 400px;
         }
+        .s-inner-container {
+            position: relative;
+        }
         .sb-title {
+            width: 85%;
             left: 50%;
+            top: 50%;
+            text-align: center;
             transform: translate(-50%, -50%);
+            @media (min-width: 320px) and (max-width: 767px) {
+                width: 90%;
+            }
             .top-main-title {
                 background: #3E9B4C;
                 height: 54px;
@@ -398,15 +407,20 @@ ul.buttons-list.grid-buttons {
                 display: inline-block;
                 margin: 0 0 30px;
                 @media (min-width: 320px) and (max-width: 1023px) {
-                    font-size: 18px;
+                    font-size: 16px;
                     height: 40px;
+                    padding: 0 10px;
                     line-height: 40px;
                     letter-spacing: 3px;
                 }
             }
             .s-mini-detail {
+                text-align: center;
                 font: Bold 22px/22px YuGothic;
                 color: #FFFFFF;
+                @media (min-width: 320px) and (max-width: 767px) {
+                    font-size: 16px;
+                }
             }
         }
     }
@@ -611,8 +625,10 @@ ul.buttons-list.grid-buttons {
                     align-items: center;
                     width: 580px;
                     margin: 0 auto 60px;
-                    @media (min-width: 320px) and (max-width: 767px) {
+                    @media (min-width: 320px) and (max-width: 550px) {
                         grid-template-columns: 1fr;
+                    }
+                    @media (min-width: 320px) and (max-width: 767px) {
                         grid-gap: 25px;
                         margin: 0 0 25px;
                         width: inherit;
@@ -751,6 +767,10 @@ ul.buttons-list.grid-buttons {
                         height: 50px;
                         line-height: 50px;
                         max-width: 340px;
+                        @media(min-width: 320px) and (max-width: 1023px) {
+                            width: 100%;
+                            max-width: 100%;
+                        }
                     }
                     .input-have-grid {
                         display: grid;
@@ -761,22 +781,59 @@ ul.buttons-list.grid-buttons {
                         }
                     }
                     .input-have-grid.input-radio-grid {
-                        grid-template-columns: 110px 110px;
+                        grid-template-columns: 150px 150px;
                         grid-gap: 30px;
                         label {
                             display: grid;
                             align-items: center;
+                            grid-gap: 8px;
                             grid-template-columns: 30px 1fr;
                             span {
+                                border: none;
+                            }
+                            span.radio-text {
                                 border: none;
                                 font: 500 15px/18px YuGothic Regular;
                                 color: #333333;
                             }
+                            span.radio-circle {
+                                width: 30px;
+                                height: 30px;
+                                border-radius: 50%;
+                                border: 1px solid #E9F2EE;
+                                position: relative;
+                                &::before {
+                                    opacity: 0;
+                                    content: '';
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    width: 10px;
+                                    height: 10px;
+                                    border-radius: 50%;
+                                    background: #3E9B4C;
+                                }
+                            }
+                            input[type="radio"]:checked + span.radio-circle {
+                                &::before {
+                                    opacity: 1;
+                                }
+                            }
                         }
-                        input[type="radio"] {
-                            width: 30px;
-                            height: 30px;
-                        } 
+                    }
+                }
+                .single-form-row.have-radio {
+                    input[type=radio] {
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+                        position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                        height: 0;
+                        width: 0;
                     }
                 }
                 .single-form-row.have-checkbox {
@@ -1254,6 +1311,15 @@ ul.buttons-list.grid-buttons {
                 position: relative;
                 height: 360px;
                 margin: 0 0 180px;
+                @media (min-width: 320px) and (max-width: 580px) {
+                    padding: 35px 0 35px;
+                    height: auto;
+                    margin: 0 0 90px;
+                }
+                @media (min-width: 581px) and (max-width: 1023px) {
+                    padding: 35px 0 0;
+                    height: 240px;
+                }
                 h2 {
                     font: Bold 30px/38px YuGothic;
                     color: #454545;
@@ -1270,8 +1336,38 @@ ul.buttons-list.grid-buttons {
                     grid-template-columns: 450px 450px;
                     grid-gap: 40px;
                     justify-content: center;
+                    @media (min-width: 320px) and (max-width: 1023px) {
+                        display: block;
+                    }
                     .req-single-item {
                         position: relative;
+                        @media (min-width: 320px) and (max-width: 580px) {
+                            position: relative;
+                            width: initial;
+                            display: block;
+                            margin: 0 0 50px;
+                            &:last-child {
+                                margin: 0;
+                            }
+                        }
+                        @media (min-width: 581px) and (max-width: 1023px) {
+                            width: 45%;
+                            display: inline-block;
+                            position: absolute;
+                            &:first-child {
+                                left: 0;
+                                right: initial;
+                            }
+                            &:last-child {
+                                right: 0;
+                                left: initial;
+                            }
+                        }
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
                         button {
                             position: absolute;
                             width: 225px;
