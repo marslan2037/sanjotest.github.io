@@ -603,7 +603,7 @@ ul.buttons-list.grid-buttons {
 
             .s-form-section-container {
                 margin: 0 auto 80px;
-                width: 800px;
+                max-width: 800px;
                 .form-header.form-have-grid {
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr;
@@ -611,6 +611,12 @@ ul.buttons-list.grid-buttons {
                     align-items: center;
                     width: 580px;
                     margin: 0 auto 60px;
+                    @media (min-width: 320px) and (max-width: 767px) {
+                        grid-template-columns: 1fr;
+                        grid-gap: 25px;
+                        margin: 0 0 25px;
+                        width: inherit;
+                    }
                     li.item-have-grid {
                         list-style: none;
                         display: grid;
@@ -635,6 +641,9 @@ ul.buttons-list.grid-buttons {
                                 transform: translate(0, -50%);
                                 right: -154px;
                                 border: 1px solid #E9F2EE;
+                                @media (min-width: 320px) and (max-width: 767px) {
+                                    display: none;
+                                }
                             }
                         }
                         span.f-text {
@@ -655,6 +664,10 @@ ul.buttons-list.grid-buttons {
                     margin: 0 0 60px;
                     border: none;
                     text-align: center;
+                    @media (min-width: 320px) and (max-width: 767px) {
+                        font-size: 20px;
+                        margin: 0 0 25px;
+                    }
                 }
                 p {
                     font: 500 14px/24px YuGothic Regular;
@@ -663,7 +676,7 @@ ul.buttons-list.grid-buttons {
                 .s-form-header {
                     margin: 0 0 50px;
                     p {
-                        width: 578px;
+                        max-width: 578px;
                         text-align: left;
                         margin: 0 auto;
                     }
@@ -675,6 +688,11 @@ ul.buttons-list.grid-buttons {
                     padding: 30px 20px;
                     border-top: 1px solid #F2F5F7;
                     border-bottom: 1px solid #F2F5F7;
+                    @media (min-width: 320px) and (max-width: 767px) {
+                        grid-template-columns: 1fr;
+                        padding: 15px 12px;
+                        grid-gap: 15px;
+                    }
                     p {
                         text-align: left;
                         font: 500 14px/25px YuGothic Regular;
@@ -732,7 +750,7 @@ ul.buttons-list.grid-buttons {
                         padding: 0 15px;
                         height: 50px;
                         line-height: 50px;
-                        width: 340px;
+                        max-width: 340px;
                     }
                     .input-have-grid {
                         display: grid;
@@ -773,6 +791,9 @@ ul.buttons-list.grid-buttons {
                         position: relative;
                         color: #333333;
                         font: 500 15px/27px YuGothic Regular;
+                        @media (min-width: 320px) and (max-width: 767px) {
+                            padding-left: 35px;
+                        }
                     }
                     span.custom-checkbox {
                         width: 30px;
@@ -783,6 +804,9 @@ ul.buttons-list.grid-buttons {
                         position: absolute;
                         display: inline-block;
                         left: -40px;
+                        @media (min-width: 320px) and (max-width: 767px) {
+                            left: -5px;
+                        }
                         span.fa.fa-check {
                             display: none;
                             border: none;
@@ -827,6 +851,11 @@ ul.buttons-list.grid-buttons {
                         &:last-child {
                             margin: 0;
                         }
+                        @media (min-width: 320px) and (max-width: 767px) {
+                            grid-template-columns: 1fr;
+                            grid-gap: 15px;
+                            margin: 0 0 15px;
+                        }
                     }
                 }
             }
@@ -851,6 +880,10 @@ ul.buttons-list.grid-buttons {
                 padding: 30px 0;
                 border-top: 1px solid #E6E6E6;
                 border-bottom: 1px solid #E6E6E6;
+                @media (min-width: 320px) and (max-width: 767px) {
+                    grid-template-columns: 1fr;
+                    margin: 0 0 40px;
+                }
                 ul {
                     li {
                         list-style: none;
@@ -934,6 +967,9 @@ ul.buttons-list.grid-buttons {
                 .x-axis-box.dark-box, .y-axis-box.dark-box {
                     background: #666666;
                     color: #fff;
+                    @media (min-width: 320px) and (max-width: 1023px) {
+                        font-size: 12px;
+                    }
                 }
                 span.blue-arrow { 
                     border-color: #3566A0 !important;
@@ -979,6 +1015,9 @@ ul.buttons-list.grid-buttons {
                     grid-template-columns: repeat(26, 1fr);
                     align-items: center;
                     grid-template-rows: 50px 30px 12px 50px 30px 50px 20px;
+                    @media (min-width: 320px) and (max-width: 767px) {
+                        display: none;
+                    }
                     .x-axis-box.first-box {
                         grid-column: 1 / 5;
                         grid-row: 1 / 2;
@@ -1049,6 +1088,9 @@ ul.buttons-list.grid-buttons {
                     align-items: center;
                     grid-template-columns: repeat(26, 1fr);
                     grid-template-rows: 40px 50px 30px 50px 40px;
+                    @media (min-width: 320px) and (max-width: 767px) {
+                        display: none;
+                    }
                     .first-box {
                         grid-row: 2 / 3;
                         grid-column: 1 / 5;
@@ -1108,6 +1150,7 @@ ul.buttons-list.grid-buttons {
                 align-items: center;
                 @media (min-width: 320px) and (max-width: 767px) {
                     grid-template-columns: 1fr;
+                    grid-template-rows: auto;
                 }
                 @media (min-width: 768px) and (max-width: 1023px) {
                     grid-template-columns: 325px 1fr;
@@ -1116,6 +1159,9 @@ ul.buttons-list.grid-buttons {
                     background: #DDDDDD;
                     height: 100%;
                     text-align: left;
+                    @media (min-width: 320px) and (max-width: 767px) {
+                        height: 200px;
+                    }
                     div {
                         margin: 0 0 13px;
                         height: inherit;
@@ -1177,6 +1223,8 @@ ul.buttons-list.grid-buttons {
                         border-radius: 50%;
                         @media (min-width: 320px) and (max-width: 767px) {
                             margin-bottom: 25px;
+                            width: 100px;
+                            height: 100px;
                         } 
                     }
                     h2 {
@@ -1298,6 +1346,9 @@ ul.buttons-list.grid-buttons {
                             &:hover {
                                 background-color: #348441;
                             }
+                            span {
+                                color: inherit;
+                            }
                         }
                     }
                 }
@@ -1321,11 +1372,11 @@ ul.buttons-list.grid-buttons {
                 margin: 0 0 70px;
                 position: relative;
                 @media (min-width: 320px) and (max-width: 1060px) {
-                    margin: 0 0 35px;
-                    font-size: 22px;
-                    height: 40px;
-                    line-height: 40px;
-                    padding-left: 10px;
+                    margin: 0 0 30px;
+                    font-size: 16px;
+                    height: 30px;
+                    line-height: 30px;
+                    padding-left: 5px;
                 }
                 span.main-heading-badge {
                     position: absolute;
@@ -1334,6 +1385,9 @@ ul.buttons-list.grid-buttons {
                     color: #333333;
                     top: 50%;
                     transform: translate(0, -50%);
+                    @media (min-width: 320px) and (max-width: 1060px) {
+                        font-size: 12px;
+                    }
                 }
                 span.s-badge-text {
                     position: absolute;
@@ -1342,6 +1396,10 @@ ul.buttons-list.grid-buttons {
                     line-height: 20px;
                     color: #0D9A0F;
                     border: 1px solid #0D9A0F;
+                    @media (min-width: 320px) and (max-width: 1060px) {
+                        left: -75px;
+                        width: 60px;
+                    }
                 }
             }
             div.grid-mini-heading {
@@ -1352,7 +1410,7 @@ ul.buttons-list.grid-buttons {
                 position: relative;
                 border-top: 1px solid #CCCCCA;
                 @media (min-width: 320px) and (max-width: 767px) {
-                    grid-template-columns: 150px 1fr;
+                    grid-template-columns: 120px 1fr;
                     padding: 15px 0 0;
                     margin: 0 0 20px;
                 }
@@ -1376,8 +1434,8 @@ ul.buttons-list.grid-buttons {
                     color: #333333;
                     border: none;
                     @media (min-width: 320px) and (max-width: 767px) {
-                        width: 150px;
-                        font-size: 16px;
+                        width: 120px;
+                        font-size: 12px;
                     }
                     @media (min-width: 768px) and (max-width: 1023px) {
                         width: 195px;
@@ -1509,9 +1567,15 @@ ul.buttons-list.grid-buttons {
                             background: #3E9B4C;
                             color: #fff;
                         }
+                        span {
+                            color: #3E9B4C;
+                        }
                     }
                     li.have-bg.dark-bg, li.have-bg.light-dark-bg {
                         color: #fff;
+                        span {
+                            color: inherit;
+                        }
                     }
                     li.have-bg.dark-bg {
                         background: #3E9B4C;

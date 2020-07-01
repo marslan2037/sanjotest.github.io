@@ -510,7 +510,7 @@ ul.buttons-list.grid-buttons {
           max-width: 100%; }
       .s-main-container .s-content-box-container .content-boxes .s-form-section-container {
         margin: 0 auto 80px;
-        width: 800px; }
+        max-width: 800px; }
         .s-main-container .s-content-box-container .content-boxes .s-form-section-container .form-header.form-have-grid {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
@@ -518,6 +518,12 @@ ul.buttons-list.grid-buttons {
           align-items: center;
           width: 580px;
           margin: 0 auto 60px; }
+          @media (min-width: 320px) and (max-width: 767px) {
+            .s-main-container .s-content-box-container .content-boxes .s-form-section-container .form-header.form-have-grid {
+              grid-template-columns: 1fr;
+              grid-gap: 25px;
+              margin: 0 0 25px;
+              width: inherit; } }
           .s-main-container .s-content-box-container .content-boxes .s-form-section-container .form-header.form-have-grid li.item-have-grid {
             list-style: none;
             display: grid;
@@ -541,6 +547,9 @@ ul.buttons-list.grid-buttons {
                 transform: translate(0, -50%);
                 right: -154px;
                 border: 1px solid #E9F2EE; }
+                @media (min-width: 320px) and (max-width: 767px) {
+                  .s-main-container .s-content-box-container .content-boxes .s-form-section-container .form-header.form-have-grid li.item-have-grid span.f-number span.middle-line {
+                    display: none; } }
             .s-main-container .s-content-box-container .content-boxes .s-form-section-container .form-header.form-have-grid li.item-have-grid span.f-text {
               font: Bold 14px/22px YuGothic;
               color: #3E9B4C; }
@@ -553,13 +562,17 @@ ul.buttons-list.grid-buttons {
           margin: 0 0 60px;
           border: none;
           text-align: center; }
+          @media (min-width: 320px) and (max-width: 767px) {
+            .s-main-container .s-content-box-container .content-boxes .s-form-section-container h2 {
+              font-size: 20px;
+              margin: 0 0 25px; } }
         .s-main-container .s-content-box-container .content-boxes .s-form-section-container p {
           font: 500 14px/24px YuGothic Regular;
           color: #333333; }
         .s-main-container .s-content-box-container .content-boxes .s-form-section-container .s-form-header {
           margin: 0 0 50px; }
           .s-main-container .s-content-box-container .content-boxes .s-form-section-container .s-form-header p {
-            width: 578px;
+            max-width: 578px;
             text-align: left;
             margin: 0 auto; }
         .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row {
@@ -569,6 +582,11 @@ ul.buttons-list.grid-buttons {
           padding: 30px 20px;
           border-top: 1px solid #F2F5F7;
           border-bottom: 1px solid #F2F5F7; }
+          @media (min-width: 320px) and (max-width: 767px) {
+            .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row {
+              grid-template-columns: 1fr;
+              padding: 15px 12px;
+              grid-gap: 15px; } }
           .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row p {
             text-align: left;
             font: 500 14px/25px YuGothic Regular;
@@ -614,7 +632,7 @@ ul.buttons-list.grid-buttons {
             padding: 0 15px;
             height: 50px;
             line-height: 50px;
-            width: 340px; }
+            max-width: 340px; }
           .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row .input-have-grid {
             display: grid;
             grid-template-columns: 100px 100px;
@@ -647,6 +665,9 @@ ul.buttons-list.grid-buttons {
             position: relative;
             color: #333333;
             font: 500 15px/27px YuGothic Regular; }
+            @media (min-width: 320px) and (max-width: 767px) {
+              .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row.have-checkbox label {
+                padding-left: 35px; } }
           .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row.have-checkbox span.custom-checkbox {
             width: 30px;
             height: 30px;
@@ -656,6 +677,9 @@ ul.buttons-list.grid-buttons {
             position: absolute;
             display: inline-block;
             left: -40px; }
+            @media (min-width: 320px) and (max-width: 767px) {
+              .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row.have-checkbox span.custom-checkbox {
+                left: -5px; } }
             .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row.have-checkbox span.custom-checkbox span.fa.fa-check {
               display: none;
               border: none;
@@ -690,6 +714,11 @@ ul.buttons-list.grid-buttons {
             align-items: center; }
             .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row.have-multiple-form-row .inner-single-form-row:last-child {
               margin: 0; }
+            @media (min-width: 320px) and (max-width: 767px) {
+              .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row.have-multiple-form-row .inner-single-form-row {
+                grid-template-columns: 1fr;
+                grid-gap: 15px;
+                margin: 0 0 15px; } }
       .s-main-container .s-content-box-container .content-boxes .s-big-img-container {
         text-align: left;
         margin: 0 0 80px; }
@@ -707,6 +736,10 @@ ul.buttons-list.grid-buttons {
         padding: 30px 0;
         border-top: 1px solid #E6E6E6;
         border-bottom: 1px solid #E6E6E6; }
+        @media (min-width: 320px) and (max-width: 767px) {
+          .s-main-container .s-content-box-container .content-boxes .s-list-detail-section {
+            grid-template-columns: 1fr;
+            margin: 0 0 40px; } }
         .s-main-container .s-content-box-container .content-boxes .s-list-detail-section ul li {
           list-style: none;
           margin: 0 0 5px;
@@ -767,6 +800,9 @@ ul.buttons-list.grid-buttons {
         .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section .x-axis-box.dark-box, .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section .y-axis-box.dark-box {
           background: #666666;
           color: #fff; }
+          @media (min-width: 320px) and (max-width: 1023px) {
+            .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section .x-axis-box.dark-box, .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section .y-axis-box.dark-box {
+              font-size: 12px; } }
         .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section span.blue-arrow {
           border-color: #3566A0 !important; }
           .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section span.blue-arrow span.fa {
@@ -799,6 +835,9 @@ ul.buttons-list.grid-buttons {
           grid-template-columns: repeat(26, 1fr);
           align-items: center;
           grid-template-rows: 50px 30px 12px 50px 30px 50px 20px; }
+          @media (min-width: 320px) and (max-width: 767px) {
+            .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section .smb-map-boxes {
+              display: none; } }
           .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section .smb-map-boxes .x-axis-box.first-box {
             grid-column: 1 / 5;
             grid-row: 1 / 2; }
@@ -852,6 +891,9 @@ ul.buttons-list.grid-buttons {
           align-items: center;
           grid-template-columns: repeat(26, 1fr);
           grid-template-rows: 40px 50px 30px 50px 40px; }
+          @media (min-width: 320px) and (max-width: 767px) {
+            .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section .smb-map-boxes2 {
+              display: none; } }
           .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section .smb-map-boxes2 .first-box {
             grid-row: 2 / 3;
             grid-column: 1 / 5; }
@@ -897,7 +939,8 @@ ul.buttons-list.grid-buttons {
         align-items: center; }
         @media (min-width: 320px) and (max-width: 767px) {
           .s-main-container .s-content-box-container .content-boxes .img-row-detail-grid {
-            grid-template-columns: 1fr; } }
+            grid-template-columns: 1fr;
+            grid-template-rows: auto; } }
         @media (min-width: 768px) and (max-width: 1023px) {
           .s-main-container .s-content-box-container .content-boxes .img-row-detail-grid {
             grid-template-columns: 325px 1fr; } }
@@ -905,6 +948,9 @@ ul.buttons-list.grid-buttons {
           background: #DDDDDD;
           height: 100%;
           text-align: left; }
+          @media (min-width: 320px) and (max-width: 767px) {
+            .s-main-container .s-content-box-container .content-boxes .img-row-detail-grid .s-row-img {
+              height: 200px; } }
           .s-main-container .s-content-box-container .content-boxes .img-row-detail-grid .s-row-img div {
             margin: 0 0 13px;
             height: inherit; }
@@ -956,7 +1002,9 @@ ul.buttons-list.grid-buttons {
           border-radius: 50%; }
           @media (min-width: 320px) and (max-width: 767px) {
             .s-main-container .s-content-box-container .content-boxes .s-services-section .single-service .service-icon {
-              margin-bottom: 25px; } }
+              margin-bottom: 25px;
+              width: 100px;
+              height: 100px; } }
         .s-main-container .s-content-box-container .content-boxes .s-services-section .single-service h2 {
           font: Bold 18px/29px YuGothic;
           color: #3E9B4C;
@@ -1060,6 +1108,8 @@ ul.buttons-list.grid-buttons {
             background-color: #3E9B4C; }
             .s-main-container .s-content-box-container .card-boxes .cards-list .single-card p a:hover {
               background-color: #348441; }
+            .s-main-container .s-content-box-container .card-boxes .cards-list .single-card p a span {
+              color: inherit; }
     .s-main-container .s-content-box-container .table-grid {
       padding-top: 0 !important; }
       .s-main-container .s-content-box-container .table-grid h2 {
@@ -1079,11 +1129,11 @@ ul.buttons-list.grid-buttons {
         position: relative; }
         @media (min-width: 320px) and (max-width: 1060px) {
           .s-main-container .s-content-box-container .table-grid h2 {
-            margin: 0 0 35px;
-            font-size: 22px;
-            height: 40px;
-            line-height: 40px;
-            padding-left: 10px; } }
+            margin: 0 0 30px;
+            font-size: 16px;
+            height: 30px;
+            line-height: 30px;
+            padding-left: 5px; } }
         .s-main-container .s-content-box-container .table-grid h2 span.main-heading-badge {
           position: absolute;
           right: 0;
@@ -1091,6 +1141,9 @@ ul.buttons-list.grid-buttons {
           color: #333333;
           top: 50%;
           transform: translate(0, -50%); }
+          @media (min-width: 320px) and (max-width: 1060px) {
+            .s-main-container .s-content-box-container .table-grid h2 span.main-heading-badge {
+              font-size: 12px; } }
         .s-main-container .s-content-box-container .table-grid h2 span.s-badge-text {
           position: absolute;
           left: -102px;
@@ -1098,6 +1151,10 @@ ul.buttons-list.grid-buttons {
           line-height: 20px;
           color: #0D9A0F;
           border: 1px solid #0D9A0F; }
+          @media (min-width: 320px) and (max-width: 1060px) {
+            .s-main-container .s-content-box-container .table-grid h2 span.s-badge-text {
+              left: -75px;
+              width: 60px; } }
       .s-main-container .s-content-box-container .table-grid div.grid-mini-heading {
         display: grid;
         grid-template-columns: 253px 1fr;
@@ -1107,7 +1164,7 @@ ul.buttons-list.grid-buttons {
         border-top: 1px solid #CCCCCA; }
         @media (min-width: 320px) and (max-width: 767px) {
           .s-main-container .s-content-box-container .table-grid div.grid-mini-heading {
-            grid-template-columns: 150px 1fr;
+            grid-template-columns: 120px 1fr;
             padding: 15px 0 0;
             margin: 0 0 20px; } }
         @media (min-width: 768px) and (max-width: 1023px) {
@@ -1130,8 +1187,8 @@ ul.buttons-list.grid-buttons {
           border: none; }
           @media (min-width: 320px) and (max-width: 767px) {
             .s-main-container .s-content-box-container .table-grid div.grid-mini-heading h2 {
-              width: 150px;
-              font-size: 16px; } }
+              width: 120px;
+              font-size: 12px; } }
           @media (min-width: 768px) and (max-width: 1023px) {
             .s-main-container .s-content-box-container .table-grid div.grid-mini-heading h2 {
               width: 195px; } }
@@ -1234,8 +1291,12 @@ ul.buttons-list.grid-buttons {
           .s-main-container .s-content-box-container .table-grid .s-pagination-row ul li.have-bg:hover {
             background: #3E9B4C;
             color: #fff; }
+          .s-main-container .s-content-box-container .table-grid .s-pagination-row ul li.have-bg span {
+            color: #3E9B4C; }
         .s-main-container .s-content-box-container .table-grid .s-pagination-row ul li.have-bg.dark-bg, .s-main-container .s-content-box-container .table-grid .s-pagination-row ul li.have-bg.light-dark-bg {
           color: #fff; }
+          .s-main-container .s-content-box-container .table-grid .s-pagination-row ul li.have-bg.dark-bg span, .s-main-container .s-content-box-container .table-grid .s-pagination-row ul li.have-bg.light-dark-bg span {
+            color: inherit; }
         .s-main-container .s-content-box-container .table-grid .s-pagination-row ul li.have-bg.dark-bg {
           background: #3E9B4C; }
         .s-main-container .s-content-box-container .table-grid .s-pagination-row ul li.have-bg.light-dark-bg {
