@@ -1093,10 +1093,8 @@ ul.buttons-list.grid-buttons {
           position: relative; }
           @media (min-width: 320px) and (max-width: 767px) {
             .s-main-container .s-content-box-container .content-boxes .s-services-section .single-service .service-icon {
-              margin-bottom: 25px;
-              width: 100px;
-              height: 100px; } }
-          .s-main-container .s-content-box-container .content-boxes .s-services-section .single-service .service-icon i.fa {
+              margin-bottom: 25px; } }
+          .s-main-container .s-content-box-container .content-boxes .s-services-section .single-service .service-icon i.fa, .s-main-container .s-content-box-container .content-boxes .s-services-section .single-service .service-icon img {
             color: #3E9B4C;
             font-size: 42px;
             position: absolute;
@@ -1104,7 +1102,7 @@ ul.buttons-list.grid-buttons {
             left: 50%;
             transform: translate(-50%, -50%); }
             @media (min-width: 320px) and (max-width: 767px) {
-              .s-main-container .s-content-box-container .content-boxes .s-services-section .single-service .service-icon i.fa {
+              .s-main-container .s-content-box-container .content-boxes .s-services-section .single-service .service-icon i.fa, .s-main-container .s-content-box-container .content-boxes .s-services-section .single-service .service-icon img {
                 font-size: 30px; } }
         .s-main-container .s-content-box-container .content-boxes .s-services-section .single-service h2 {
           font: Bold 18px/29px YuGothic;
