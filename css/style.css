@@ -281,14 +281,10 @@ ul.buttons-list.grid-buttons {
       transform: translate(0, -50%); }
       @media (min-width: 320px) and (max-width: 767px) {
         .s-main-container .s-banner-title div.sb-title {
-          font: Bold 18px/34px YuGothic;
-          left: 50px;
-          top: 60px; } }
+          left: 20px; } }
       @media (min-width: 768px) and (max-width: 1060px) {
         .s-main-container .s-banner-title div.sb-title {
-          font: Bold 22px/38px YuGothic;
-          left: 50px;
-          top: 80px; } }
+          left: 40px; } }
       .s-main-container .s-banner-title div.sb-title span {
         display: block;
         color: #3E9B4C;
@@ -296,8 +292,24 @@ ul.buttons-list.grid-buttons {
       .s-main-container .s-banner-title div.sb-title span.top-mini-title {
         font: Bold 18px/31px YuGothic;
         color: #3E9B4C; }
+        @media (min-width: 320px) and (max-width: 767px) {
+          .s-main-container .s-banner-title div.sb-title span.top-mini-title {
+            font-size: 14px;
+            line-height: 22px; } }
+        @media (min-width: 768px) and (max-width: 1060px) {
+          .s-main-container .s-banner-title div.sb-title span.top-mini-title {
+            font-size: 16px;
+            line-height: 24px; } }
       .s-main-container .s-banner-title div.sb-title span.top-main-title {
         font: Bold 30px/51px YuGothic; }
+        @media (min-width: 320px) and (max-width: 767px) {
+          .s-main-container .s-banner-title div.sb-title span.top-main-title {
+            font-size: 18px;
+            line-height: 24px; } }
+        @media (min-width: 768px) and (max-width: 1060px) {
+          .s-main-container .s-banner-title div.sb-title span.top-main-title {
+            font-size: 22px;
+            line-height: 26px; } }
     .s-main-container .s-banner-title span.sb-title {
       color: #3E9B4C;
       position: absolute;
@@ -531,18 +543,18 @@ ul.buttons-list.grid-buttons {
           align-items: center;
           width: 580px;
           margin: 0 auto 60px; }
-          @media (min-width: 320px) and (max-width: 550px) {
-            .s-main-container .s-content-box-container .content-boxes .s-form-section-container .form-header.form-have-grid {
-              grid-template-columns: 1fr; } }
           @media (min-width: 320px) and (max-width: 767px) {
             .s-main-container .s-content-box-container .content-boxes .s-form-section-container .form-header.form-have-grid {
               grid-gap: 25px;
-              margin: 0 0 25px;
+              margin: 0 0 75px;
               width: inherit; } }
           .s-main-container .s-content-box-container .content-boxes .s-form-section-container .form-header.form-have-grid li.item-have-grid {
             list-style: none;
             display: grid;
             grid-gap: 16px; }
+            @media (min-width: 320px) and (max-width: 767px) {
+              .s-main-container .s-content-box-container .content-boxes .s-form-section-container .form-header.form-have-grid li.item-have-grid {
+                position: relative; } }
             .s-main-container .s-content-box-container .content-boxes .s-form-section-container .form-header.form-have-grid li.item-have-grid span {
               justify-self: center;
               display: grid;
@@ -568,6 +580,11 @@ ul.buttons-list.grid-buttons {
             .s-main-container .s-content-box-container .content-boxes .s-form-section-container .form-header.form-have-grid li.item-have-grid span.f-text {
               font: Bold 14px/22px YuGothic;
               color: #3E9B4C; }
+              @media (min-width: 320px) and (max-width: 767px) {
+                .s-main-container .s-content-box-container .content-boxes .s-form-section-container .form-header.form-have-grid li.item-have-grid span.f-text {
+                  position: absolute;
+                  bottom: -58px;
+                  height: 45px; } }
           .s-main-container .s-content-box-container .content-boxes .s-form-section-container .form-header.form-have-grid li.item-have-grid.active span.f-number {
             background: #3E9B4C;
             color: #FFFFFF; }
@@ -580,7 +597,7 @@ ul.buttons-list.grid-buttons {
           @media (min-width: 320px) and (max-width: 767px) {
             .s-main-container .s-content-box-container .content-boxes .s-form-section-container h2 {
               font-size: 20px;
-              margin: 0 0 25px; } }
+              margin: 0 0 45px; } }
         .s-main-container .s-content-box-container .content-boxes .s-form-section-container p {
           font: 500 14px/24px YuGothic Regular;
           color: #333333; }
@@ -661,23 +678,37 @@ ul.buttons-list.grid-buttons {
           .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row .input-have-grid.input-radio-grid {
             grid-template-columns: 150px 150px;
             grid-gap: 30px; }
+            @media (min-width: 320px) and (max-width: 767px) {
+              .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row .input-have-grid.input-radio-grid {
+                grid-template-columns: 120px 120px;
+                grid-gap: 15px; } }
             .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row .input-have-grid.input-radio-grid label {
               display: grid;
               align-items: center;
               grid-gap: 8px;
               grid-template-columns: 30px 1fr; }
+              @media (min-width: 320px) and (max-width: 767px) {
+                .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row .input-have-grid.input-radio-grid label {
+                  grid-template-columns: 20px 1fr; } }
               .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row .input-have-grid.input-radio-grid label span {
                 border: none; }
               .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row .input-have-grid.input-radio-grid label span.radio-text {
                 border: none;
                 font: 500 15px/18px YuGothic Regular;
                 color: #333333; }
+                @media (min-width: 320px) and (max-width: 767px) {
+                  .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row .input-have-grid.input-radio-grid label span.radio-text {
+                    padding: 0; } }
               .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row .input-have-grid.input-radio-grid label span.radio-circle {
                 width: 30px;
                 height: 30px;
                 border-radius: 50%;
                 border: 1px solid #E9F2EE;
                 position: relative; }
+                @media (min-width: 320px) and (max-width: 767px) {
+                  .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row .input-have-grid.input-radio-grid label span.radio-circle {
+                    width: 20px;
+                    height: 20px; } }
                 .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row .input-have-grid.input-radio-grid label span.radio-circle::before {
                   opacity: 0;
                   content: '';
@@ -689,6 +720,10 @@ ul.buttons-list.grid-buttons {
                   height: 10px;
                   border-radius: 50%;
                   background: #3E9B4C; }
+                  @media (min-width: 320px) and (max-width: 767px) {
+                    .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row .input-have-grid.input-radio-grid label span.radio-circle::before {
+                      width: 8px;
+                      height: 8px; } }
               .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row .input-have-grid.input-radio-grid label input[type="radio"]:checked + span.radio-circle::before {
                 opacity: 1; }
         .s-main-container .s-content-box-container .content-boxes .s-form-section-container .single-form-row.have-radio input[type=radio] {
@@ -821,7 +856,14 @@ ul.buttons-list.grid-buttons {
               margin: 0; }
             .s-main-container .s-content-box-container .content-boxes .s-files-links-section ul li a {
               font: 500 15px/16px YuGothic Regular;
-              color: #3E9B4C; }
+              color: #3E9B4C;
+              position: relative; }
+              .s-main-container .s-content-box-container .content-boxes .s-files-links-section ul li a img {
+                margin-left: 10px;
+                /* bottom: 5px; */
+                position: absolute;
+                top: 50%;
+                transform: translate(0, -50%); }
       .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section {
         margin: 0 0 129px; }
         .s-main-container .s-content-box-container .content-boxes .s-map-boxes-section h2 {
@@ -1047,12 +1089,23 @@ ul.buttons-list.grid-buttons {
           height: 154px;
           background: #E9F2EE;
           margin: 0 auto 50px;
-          border-radius: 50%; }
+          border-radius: 50%;
+          position: relative; }
           @media (min-width: 320px) and (max-width: 767px) {
             .s-main-container .s-content-box-container .content-boxes .s-services-section .single-service .service-icon {
               margin-bottom: 25px;
               width: 100px;
               height: 100px; } }
+          .s-main-container .s-content-box-container .content-boxes .s-services-section .single-service .service-icon i.fa {
+            color: #3E9B4C;
+            font-size: 42px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); }
+            @media (min-width: 320px) and (max-width: 767px) {
+              .s-main-container .s-content-box-container .content-boxes .s-services-section .single-service .service-icon i.fa {
+                font-size: 30px; } }
         .s-main-container .s-content-box-container .content-boxes .s-services-section .single-service h2 {
           font: Bold 18px/29px YuGothic;
           color: #3E9B4C;
@@ -1071,7 +1124,7 @@ ul.buttons-list.grid-buttons {
             .s-main-container .s-content-box-container .content-boxes .s-services-section .single-service p {
               text-align: center; } }
       .s-main-container .s-content-box-container .content-boxes .req-sections {
-        padding: 80px 0 0;
+        padding: 75px 0 0;
         background: #E9F2EE;
         position: relative;
         height: 360px;
@@ -1085,13 +1138,28 @@ ul.buttons-list.grid-buttons {
           .s-main-container .s-content-box-container .content-boxes .req-sections {
             padding: 35px 0 0;
             height: 240px; } }
+        .s-main-container .s-content-box-container .content-boxes .req-sections span.req-text {
+          font-size: 76px;
+          font-weight: bold;
+          color: #000;
+          position: absolute;
+          top: -10px;
+          left: 50%;
+          transform: translate(-50%, 0); }
+          @media (min-width: 320px) and (max-width: 767px) {
+            .s-main-container .s-content-box-container .content-boxes .req-sections span.req-text {
+              font-size: 34px; } }
+          @media (min-width: 768px) and (max-width: 1023px) {
+            .s-main-container .s-content-box-container .content-boxes .req-sections span.req-text {
+              font-size: 52px; } }
         .s-main-container .s-content-box-container .content-boxes .req-sections h2 {
           font: Bold 30px/38px YuGothic;
           color: #454545;
           margin: 0 0 70px;
           text-align: center;
           border: none;
-          padding: 0; }
+          padding: 0;
+          height: initial; }
         .s-main-container .s-content-box-container .content-boxes .req-sections .req-sections-grid {
           position: relative;
           bottom: 25px;
@@ -1212,7 +1280,7 @@ ul.buttons-list.grid-buttons {
         @media (min-width: 320px) and (max-width: 1060px) {
           .s-main-container .s-content-box-container .table-grid h2 {
             margin: 0 0 30px;
-            font-size: 16px;
+            font-size: 20px;
             height: 30px;
             line-height: 30px;
             padding-left: 5px; } }
@@ -1287,7 +1355,7 @@ ul.buttons-list.grid-buttons {
           position: relative; }
           @media (min-width: 320px) and (max-width: 767px) {
             .s-main-container .s-content-box-container .table-grid .table-grid-data .single-table-grid-row {
-              grid-template-columns: 95px 1fr; } }
+              grid-template-columns: 1fr; } }
           @media (min-width: 768px) and (max-width: 1023px) {
             .s-main-container .s-content-box-container .table-grid .table-grid-data .single-table-grid-row {
               grid-template-columns: 195px 1fr; } }
@@ -1295,6 +1363,9 @@ ul.buttons-list.grid-buttons {
             border-bottom: none; }
           .s-main-container .s-content-box-container .table-grid .table-grid-data .single-table-grid-row:first-child span.top-minner-border {
             top: 0px; }
+          @media (min-width: 320px) and (max-width: 767px) {
+            .s-main-container .s-content-box-container .table-grid .table-grid-data .single-table-grid-row span.top-minner-border {
+              top: 0px; } }
           .s-main-container .s-content-box-container .table-grid .table-grid-data .single-table-grid-row p {
             text-align: left;
             font: 500 15px/16px YuGothic Regular;
@@ -1342,6 +1413,9 @@ ul.buttons-list.grid-buttons {
                   font-size: 13px; } }
         .s-main-container .s-content-box-container .table-grid .table-grid-data .single-table-grid-row.mini-table-grid-row {
           grid-template-columns: 180px 1fr !important; }
+          @media (min-width: 320px) and (max-width: 767px) {
+            .s-main-container .s-content-box-container .table-grid .table-grid-data .single-table-grid-row.mini-table-grid-row {
+              grid-template-columns: 1fr !important; } }
           .s-main-container .s-content-box-container .table-grid .table-grid-data .single-table-grid-row.mini-table-grid-row p {
             font: 500 14px/16px YuGothic Regular !important;
             color: #333333 !important; }
@@ -1390,8 +1464,16 @@ ul.buttons-list.grid-buttons {
       .s-main-container .s-content-box-container .table-grid.table-grid-without-border .table-grid-data .single-table-grid-row div.s-heading, .s-main-container .s-content-box-container .table-grid.table-grid-without-border .table-grid-data .single-table-grid-row div.s-detail {
         border-bottom: 1px solid #CCCCCA;
         border-right: none; }
+      @media (min-width: 320px) and (max-width: 767px) {
+        .s-main-container .s-content-box-container .table-grid.table-grid-without-border .table-grid-data .single-table-grid-row div.s-detail {
+          border-top: none !important;
+          border-bottom: none !important; } }
       .s-main-container .s-content-box-container .table-grid.table-grid-without-border .table-grid-data .single-table-grid-row div.s-heading {
         background: none; }
+        @media (min-width: 320px) and (max-width: 767px) {
+          .s-main-container .s-content-box-container .table-grid.table-grid-without-border .table-grid-data .single-table-grid-row div.s-heading {
+            border-bottom: none !important;
+            border-top: 1px solid #CCCCCA !important; } }
   .s-main-container .s-content-box-container.no-margin-bottom {
     margin: 0; }
   .s-main-container .s-how-to-section {

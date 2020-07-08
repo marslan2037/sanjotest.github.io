@@ -327,14 +327,10 @@ ul.buttons-list.grid-buttons {
             left: 0;
             transform: translate(0, -50%);
             @media (min-width: 320px) and (max-width: 767px) {
-                font: Bold 18px/34px YuGothic;
-                left: 50px;
-                top: 60px;
+                left: 20px;
             }
             @media (min-width: 768px) and (max-width: 1060px) {
-                font: Bold 22px/38px YuGothic;
-                left: 50px;
-                top: 80px;
+                left: 40px;
             }
             span {
                 display: block;
@@ -344,9 +340,25 @@ ul.buttons-list.grid-buttons {
             span.top-mini-title {
                 font: Bold 18px/31px YuGothic;
                 color: #3E9B4C;
+                @media (min-width: 320px) and (max-width: 767px) {
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+                @media (min-width: 768px) and (max-width: 1060px) {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
             }
             span.top-main-title {
                 font: Bold 30px/51px YuGothic;
+                @media (min-width: 320px) and (max-width: 767px) {
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+                @media (min-width: 768px) and (max-width: 1060px) {
+                    font-size: 22px;
+                    line-height: 26px;
+                }
             }
         }
         
@@ -626,17 +638,20 @@ ul.buttons-list.grid-buttons {
                     width: 580px;
                     margin: 0 auto 60px;
                     @media (min-width: 320px) and (max-width: 550px) {
-                        grid-template-columns: 1fr;
+                        // grid-template-columns: 1fr;
                     }
                     @media (min-width: 320px) and (max-width: 767px) {
                         grid-gap: 25px;
-                        margin: 0 0 25px;
+                        margin: 0 0 75px;
                         width: inherit;
                     }
                     li.item-have-grid {
                         list-style: none;
                         display: grid;
                         grid-gap: 16px;
+                        @media (min-width: 320px) and (max-width: 767px) {
+                            position: relative;
+                        }
                         span {
                             justify-self: center;
                             display: grid;
@@ -665,6 +680,11 @@ ul.buttons-list.grid-buttons {
                         span.f-text {
                             font: Bold 14px/22px YuGothic;
                             color: #3E9B4C;
+                            @media (min-width: 320px) and (max-width: 767px) {
+                                position: absolute;
+                                bottom: -58px;
+                                height: 45px;
+                            }
                         }
                     }
                     li.item-have-grid.active {
@@ -682,7 +702,7 @@ ul.buttons-list.grid-buttons {
                     text-align: center;
                     @media (min-width: 320px) and (max-width: 767px) {
                         font-size: 20px;
-                        margin: 0 0 25px;
+                        margin: 0 0 45px;
                     }
                 }
                 p {
@@ -783,11 +803,18 @@ ul.buttons-list.grid-buttons {
                     .input-have-grid.input-radio-grid {
                         grid-template-columns: 150px 150px;
                         grid-gap: 30px;
+                        @media (min-width: 320px) and (max-width: 767px) {
+                            grid-template-columns: 120px 120px;
+                            grid-gap: 15px;
+                        }
                         label {
                             display: grid;
                             align-items: center;
                             grid-gap: 8px;
                             grid-template-columns: 30px 1fr;
+                            @media (min-width: 320px) and (max-width: 767px) {
+                                grid-template-columns: 20px 1fr;
+                            }
                             span {
                                 border: none;
                             }
@@ -795,6 +822,9 @@ ul.buttons-list.grid-buttons {
                                 border: none;
                                 font: 500 15px/18px YuGothic Regular;
                                 color: #333333;
+                                @media (min-width: 320px) and (max-width: 767px) {
+                                    padding: 0;
+                                }
                             }
                             span.radio-circle {
                                 width: 30px;
@@ -802,6 +832,10 @@ ul.buttons-list.grid-buttons {
                                 border-radius: 50%;
                                 border: 1px solid #E9F2EE;
                                 position: relative;
+                                @media (min-width: 320px) and (max-width: 767px) {
+                                    width: 20px;
+                                    height: 20px;
+                                }
                                 &::before {
                                     opacity: 0;
                                     content: '';
@@ -813,6 +847,10 @@ ul.buttons-list.grid-buttons {
                                     height: 10px;
                                     border-radius: 50%;
                                     background: #3E9B4C;
+                                    @media (min-width: 320px) and (max-width: 767px) {
+                                        width: 8px;
+                                        height: 8px;
+                                    }
                                 }
                             }
                             input[type="radio"]:checked + span.radio-circle {
@@ -988,6 +1026,14 @@ ul.buttons-list.grid-buttons {
                         a {
                             font: 500 15px/16px YuGothic Regular;
                             color: #3E9B4C;
+                            position: relative;
+                            img {
+                                margin-left: 10px;
+                                /* bottom: 5px; */
+                                position: absolute;
+                                top: 50%;
+                                transform: translate(0, -50%);
+                            }
                         }
                     }
                 }
@@ -1278,11 +1324,23 @@ ul.buttons-list.grid-buttons {
                         background: #E9F2EE;
                         margin: 0 auto 50px;
                         border-radius: 50%;
+                        position: relative;
                         @media (min-width: 320px) and (max-width: 767px) {
                             margin-bottom: 25px;
                             width: 100px;
                             height: 100px;
                         } 
+                        i.fa {
+                            color: #3E9B4C;
+                            font-size: 42px;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            @media (min-width: 320px) and (max-width: 767px) {
+                                font-size: 30px;
+                            } 
+                        }
                     }
                     h2 {
                         font: Bold 18px/29px YuGothic;
@@ -1306,7 +1364,7 @@ ul.buttons-list.grid-buttons {
                 }
             }
             .req-sections {
-                padding: 80px 0 0;
+                padding: 75px 0 0;
                 background: #E9F2EE;
                 position: relative;
                 height: 360px;
@@ -1320,6 +1378,21 @@ ul.buttons-list.grid-buttons {
                     padding: 35px 0 0;
                     height: 240px;
                 }
+                span.req-text {
+                    font-size: 76px;
+                    font-weight: bold;
+                    color: #000;
+                    position: absolute;
+                    top: -10px;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    @media (min-width: 320px) and (max-width: 767px) {
+                        font-size: 34px;
+                    }
+                    @media (min-width: 768px) and (max-width: 1023px) {
+                        font-size: 52px;
+                    }
+                }
                 h2 {
                     font: Bold 30px/38px YuGothic;
                     color: #454545;
@@ -1327,6 +1400,7 @@ ul.buttons-list.grid-buttons {
                     text-align: center;
                     border: none;
                     padding: 0;
+                    height: initial;
                 }
                 .req-sections-grid {
                     position: relative;
@@ -1469,7 +1543,7 @@ ul.buttons-list.grid-buttons {
                 position: relative;
                 @media (min-width: 320px) and (max-width: 1060px) {
                     margin: 0 0 30px;
-                    font-size: 16px;
+                    font-size: 20px;
                     height: 30px;
                     line-height: 30px;
                     padding-left: 5px;
@@ -1550,7 +1624,8 @@ ul.buttons-list.grid-buttons {
                     grid-template-columns: 253px 1fr;
                     position: relative;
                     @media (min-width: 320px) and (max-width: 767px) {
-                        grid-template-columns: 95px 1fr;
+                        // grid-template-columns: 95px 1fr;
+                        grid-template-columns: 1fr;
                     }
                     @media (min-width: 768px) and (max-width: 1023px) {
                         grid-template-columns: 195px 1fr;
@@ -1562,6 +1637,11 @@ ul.buttons-list.grid-buttons {
                     }
                     &:first-child {
                         span.top-minner-border {
+                            top: 0px;
+                        }
+                    }
+                    span.top-minner-border {
+                        @media (min-width: 320px) and (max-width: 767px) {
                             top: 0px;
                         }
                     }
@@ -1623,6 +1703,9 @@ ul.buttons-list.grid-buttons {
                 }
                 .single-table-grid-row.mini-table-grid-row {
                     grid-template-columns: 180px 1fr !important;
+                    @media (min-width: 320px) and (max-width: 767px) {
+                        grid-template-columns: 1fr !important;
+                    }
                     p {
                         font: 500 14px/16px YuGothic Regular !important;
                         color: #333333 !important;
@@ -1685,18 +1768,34 @@ ul.buttons-list.grid-buttons {
         .table-grid.table-grid-without-border {
             .table-grid-data {
                 border: none;
+                @media (min-width: 320px) and (max-width: 767px) {
+                    // grid-gap: 30px;
+                }
                 .single-table-grid-row {
                     &:first-child {
                         div.s-heading, div.s-detail {
                             border-top: 1px solid #CCCCCA;
+                            // @media (min-width: 320px) and (max-width: 767px) {
+                            //     border: none;
+                            // }
                         }
                     }
                     div.s-heading, div.s-detail {
                         border-bottom: 1px solid #CCCCCA;
                         border-right: none;
                     }
+                    div.s-detail {
+                        @media (min-width: 320px) and (max-width: 767px) {
+                            border-top: none !important;
+                            border-bottom: none !important;
+                        }
+                    }
                     div.s-heading {
                         background: none;
+                        @media (min-width: 320px) and (max-width: 767px) {
+                            border-bottom: none !important;
+                            border-top: 1px solid #CCCCCA !important;
+                        }
                     }
                 }
             }
